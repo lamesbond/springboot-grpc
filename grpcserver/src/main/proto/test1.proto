@@ -1,0 +1,21 @@
+//版本
+syntax = "proto3";
+
+option java_multiple_files = true;
+// grpc插件生成的类的报名，随便写
+option java_package = "com.axin.test.grpcserver";
+
+// grpc的方法
+service TestGrpcService {
+  rpc testMethod (TestRequest) returns (TestReply){}
+}
+
+// 入参对象
+message TestRequest {
+  string id=1;
+  string name=2;
+}
+// 出参对象
+message TestReply {
+  string res=1;
+}
