@@ -24,6 +24,7 @@ public class TestGrpcService {
      *  Stub，支持StreamObserver
      */
 
+//    这里填的要和配置文件里的一样，grpc.client.grpcserver.address=static://127.0.0.1:30081
     @GrpcClient("grpcserver")
     TestGrpcServiceGrpc.TestGrpcServiceBlockingStub stub;
 
